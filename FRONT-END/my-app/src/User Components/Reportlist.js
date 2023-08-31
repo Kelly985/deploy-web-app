@@ -4,14 +4,14 @@ const ReportsList = () => {
   const [reports, setReports] = useState([]);
   useEffect(() => {
     // Fetch report data here
-    fetch('/reports')
+    fetch('https://ireporter-a0gp.onrender.com/reports')
       .then(response => response.json())
       .then(data => setReports(data))
       .catch(error => console.error('Error fetching reports:', error));
   }, []);
   const handleDeleteReport = async (reportId) => {
     try {
-      const response = await fetch(`/reports/${reportId}`, {
+      const response = await fetch(`https://ireporter-a0gp.onrender.com/reports/${reportId}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
@@ -25,7 +25,7 @@ const ReportsList = () => {
   };
   const handleEditField = async (reportId, field, value) => {
     try {
-      const response = await fetch(`/reports/${reportId}`, {
+      const response = await fetch(`https://ireporter-a0gp.onrender.com/reports/${reportId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const ReportsList = () => {
     try {
       const formData = new FormData();
       formData.append('file', file);
-      const response = await fetch(`http://localhost:5000/reports/${reportId}/media`, {
+      const response = await fetch(`https://ireporter-a0gp.onrender.com/reports/${reportId}/media`, {
         method: 'PATCH',
         body: formData,
       });

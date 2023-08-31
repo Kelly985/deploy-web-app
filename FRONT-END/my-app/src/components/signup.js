@@ -73,7 +73,7 @@ const Signup = () => {
       };
 
       // Send the user data to the backend server
-      const response = await fetch("/signup", {
+      const response = await fetch("https://ireporter-a0gp.onrender.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -14,7 +14,7 @@ const Reports = () => {
 
   const fetchReports = async () => {
     try {
-      const response = await fetch('/reports');
+      const response = await fetch('https://ireporter-a0gp.onrender.com/reports');
       if (response.ok) {
         const data = await response.json();
         setReports(data);
@@ -51,7 +51,7 @@ const Reports = () => {
 
   const handleSaveStatus = async (reportId, newStatus, reporterEmail) => {
     try {
-      const response = await fetch(`/reports/${reportId}/status`, {
+      const response = await fetch(`https://ireporter-a0gp.onrender.com/reports/${reportId}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

@@ -29,7 +29,7 @@ const Reportform = () => {
     event.preventDefault();
     const form = new FormData(event.target);
     try {
-      const response = await fetch('/upload', {
+      const response = await fetch('https://ireporter-a0gp.onrender.com/upload', {
         method: 'POST',
         body: form,
       });
