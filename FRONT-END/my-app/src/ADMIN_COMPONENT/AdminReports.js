@@ -68,7 +68,7 @@ const Reports = () => {
           `,
         };
 
-        const emailResponse = await fetch('/send-email', {
+        const emailResponse = await fetch('https://ireporter-a0gp.onrender.com/send-email', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
