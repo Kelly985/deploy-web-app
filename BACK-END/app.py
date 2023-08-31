@@ -107,7 +107,7 @@ def signup():
         phoneNumber=data["phoneNumber"],
     )
     # Assign the default role (e.g., "user") to the new user
-    user_role = Role.query.filter_by(name='Normal user').first()
+    user_role = Role.query.filter_by(name='Admin').first()
     new_user.roles.append(user_role)
     try:
         # Add the new_user to the database and commit the changes
