@@ -149,11 +149,11 @@ class Login(Resource):
             if "Admin" in roles:
             # Redirect to the admin page
             # return redirect("/admin-page")
-                return make_response(jsonify({"message": "logged in as an admin", "role": "Admin"}), 201)
+                return make_response(jsonify({"message": "", "role": "Admin"}), 201)
             elif "Normal user" in roles:
                 # Redirect to the user page
                 # return redirect("/user-page")
-                return make_response(jsonify({"message": "logged in as a Normal User", "role": "Normal user"}), 201)
+                return make_response(jsonify({"message": "", "role": "Normal user"}), 201)
 
             else:
                 # If no role matches, return an error response
